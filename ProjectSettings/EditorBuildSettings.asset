@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TestCannonNathan.unity
+    guid: 78cde22b313a77e408e10dc179975afe
   m_configObjects: {}

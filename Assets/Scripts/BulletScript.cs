@@ -18,4 +18,13 @@ public class BulletScript : MonoBehaviour
         transform.position = transform.position + (transform.up*AccelerationProjectile);
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log("Coucou");
+        if (collision.transform.GetComponent<Rigidbody2D>())
+        {
+            collision.transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.up.x, transform.up.y));
+        }
+    }
 }

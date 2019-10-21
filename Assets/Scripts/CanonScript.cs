@@ -38,7 +38,7 @@ public class CanonScript : MonoBehaviour
         float myFloat= Input.mousePosition.x/Screen.currentResolution.width;
         //Screen.currentResolution;
 
-        Debug.Log(myFloat);
+       // Debug.Log(myFloat);
         TheCanon.transform.position = QuadraticCurve(
             new Vector2(ListPoints[0].transform.position.x, ListPoints[0].transform.position.y),
             new Vector2(ListPoints[1].transform.position.x, ListPoints[1].transform.position.y),
