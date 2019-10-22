@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         for(int i=0;i<InitialSpoolCount;i++){
-        InvokeRepeating ("Spawn", spawnTime, spawnTime);
+        Invoke("Spawn", spawnTime);
         }
     }
 
