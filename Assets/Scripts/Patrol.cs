@@ -20,9 +20,23 @@
         void Update () {
             //Debug.Log(target.Length);
             if(transform.position != target[current].position){
-                Vector2 pos = Vector2.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
-                GetComponent<Rigidbody2D>().MovePosition(pos);
+                Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
+                GetComponent<Rigidbody>().MovePosition(pos);
                 //Debug.Log(current);
-            }else current = (current + 1) % target.Length;
+            }//else current = (current + 1) % target.Length;
+        }
+
+        /// <summary>
+        /// OnTriggerEnter is called when the Collider other enters the trigger.
+        /// </summary>
+        /// <param name="other">The other Collider involved in this collision.</param>
+        void OnTriggerEnter(Collider other)
+        {
+            if(other.tag == "target"){
+                if(current+1 < target.Length)
+                {
+                    current = (current + 1);
+                }
+            }
         }
 }
