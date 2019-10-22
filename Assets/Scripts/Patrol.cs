@@ -19,7 +19,7 @@
 
         void Update () {
             //Debug.Log(target.Length);
-            if(transform.position != target[current].position){
+            if(transform.position != target[current].position && target != null){
                 Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
                 GetComponent<Rigidbody>().MovePosition(pos);
                 //Debug.Log(current);
@@ -38,5 +38,10 @@
                     current = (current + 1);
                 }
             }
+        }
+
+        public void setPatrols(Transform[] tabtarg)
+        {
+            target = tabtarg;
         }
 }
