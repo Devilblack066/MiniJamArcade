@@ -5,7 +5,7 @@ using UnityEngine;
 public class BulletScript : MonoBehaviour
 {
     [SerializeField]
-    public int AccelerationProjectile = 30;
+    public float AccelerationProjectile = 30;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,16 +15,17 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = transform.position + (transform.up*AccelerationProjectile);
+        Debug.Log(transform.position);
+        transform.position = transform.position + (transform.forward*AccelerationProjectile);
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Coucou");
+        /*Debug.Log("Coucou");
         if (collision.transform.GetComponent<Rigidbody2D>())
         {
             collision.transform.GetComponent<Rigidbody2D>().AddForce(new Vector2(transform.up.x, transform.up.y));
         }
-    }
+    }*/
 }
