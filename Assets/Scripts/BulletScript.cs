@@ -15,7 +15,7 @@ public class BulletScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
         transform.position = transform.position + (transform.forward*AccelerationProjectile);
 
     }

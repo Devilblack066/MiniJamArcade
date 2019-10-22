@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5784229594750792561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.83, z: -7.255}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 724005032404512267}
@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5784229594756361089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -13229.635, y: 4561.34, z: 21867.244}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5784229594750792560}
@@ -132,8 +132,9 @@ MonoBehaviour:
   PivotCanon: {fileID: 5784229594750792561}
   CanonDelayShot: 4
   TimerShot: 0
-  BulletPrefab: {fileID: 0}
-  BulletSpawnerPos: {fileID: 0}
+  BulletPrefab: {fileID: 479814194949490394, guid: 166030b57d15f6041b5cd379eaf61f02,
+    type: 3}
+  BulletSpawnerPos: {fileID: 4513199770413332427}
 --- !u!1 &7112693630482601588
 GameObject:
   m_ObjectHideFlags: 0
