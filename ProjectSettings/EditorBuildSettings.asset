@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/TestCannonNathan.unity
-    guid: 78cde22b313a77e408e10dc179975afe
+    path: Assets/Scenes/MainMenu.unity
+    guid: af6ad20cdbd0f2a4a95a409481e6ebf3
+  - enabled: 1
+    path: Assets/Scenes/Final_Scene.unity
+    guid: fb5c5a0b7706f8f48acf47a25618be26
   m_configObjects: {}
