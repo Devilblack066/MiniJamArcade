@@ -63,7 +63,7 @@ public class Spawner : MonoBehaviour
                 //Debug.Log("?");
                 StopCoroutine(theCoroutine);
             }
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(spawnTime);
         }
     }
 }
