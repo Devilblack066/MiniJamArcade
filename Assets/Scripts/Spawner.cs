@@ -27,6 +27,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         theCoroutine = StartCoroutine(Spawn());
+        //StartCoroutine(EzWin());
     }
 
     // Update is called once per frame
@@ -50,15 +51,15 @@ public class Spawner : MonoBehaviour
         }*/
     }
 
-    public IEnumerator EzWin()
+    public IEnumerator CheckWin()
     {
         while(true)
         {
             if(EnemyCount == 0 )
             {
                 SceneManager.LoadScene(0);
-                yield return new WaitForSeconds(0.0f);
             }
+            yield return new WaitForSeconds(0.1f);
         }
 
     }
@@ -72,13 +73,14 @@ public class Spawner : MonoBehaviour
             // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
             GameObject EnnemySPWND = Instantiate(PrefabEnemy, this.transform.position, this.transform.rotation);
             EnnemySPWND.GetComponent<Patrol>().setPatrols(target);
-            EnemyCount ++;
+            ++EnemyCount;
             //TabEnemySpawn.Add(EnnemySPWND);
             if (nbspawn == InitialSpoolCount)
             {
                 //Debug.Log("?");
+                /*if(theCoroutine != null)*/
+                StartCoroutine(CheckWin());
                 StopCoroutine(theCoroutine);
-                StartCoroutine(EzWin());
             }
             yield return new WaitForSeconds(spawnTime);
         }
