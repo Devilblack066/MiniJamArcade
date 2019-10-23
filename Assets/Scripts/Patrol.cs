@@ -1,5 +1,6 @@
 ﻿
     using UnityEngine;
+    using UnityEngine.SceneManagement;
     using UnityEngine.AI;
     using System.Collections;
 
@@ -19,11 +20,17 @@
 
         void Update () {
             //Debug.Log(target.Length);
-            if(transform.position != target[current].position && target != null){
+
+            if(transform.position != target[current].position && target != null && transform.position.y > 0){
                 Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
                 GetComponent<Rigidbody>().MovePosition(pos);
                 //Debug.Log(current);
             }//else current = (current + 1) % target.Length;
+            if(this.transform.position.y < -2  )
+            {
+                Destroy(this.gameObject);
+                SceneManager.LoadScene(0);
+            }
         }
 
         /// <summary>
@@ -35,7 +42,8 @@
             if(other.tag == "target"){
                 if(current+1 < target.Length)
                 {
-                    current = (current + 1);
+                    Debug.Log(current);
+                    current += + 1;
                 }
             }
         }

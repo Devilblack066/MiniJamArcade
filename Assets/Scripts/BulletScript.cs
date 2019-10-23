@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BulletScript : MonoBehaviour
 {
@@ -19,6 +20,18 @@ public class BulletScript : MonoBehaviour
         transform.position = transform.position + (transform.forward*AccelerationProjectile);
 
     }
+
+
+    /// OnTriggerEnter is called when the Collider other enters the trigger.
+    /// </summary>
+    /// <param name="other">The other Collider involved in this collision.</param>
+    //void OnTriggerEnter(Collider other)
+    // {
+        //if(other.tag == "Enemy")
+        //{
+        //    SceneManager.LoadScene(0);
+        //}
+   // }
 
     /*private void OnCollisionEnter2D(Collision2D collision)
     {
