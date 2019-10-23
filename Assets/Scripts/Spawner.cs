@@ -58,6 +58,5 @@ public class Spawner : MonoBehaviour
         GameObject EnnemySPWND = Instantiate (PrefabEnemy,this.transform.position ,this.transform.rotation);
         EnnemySPWND.GetComponent<Patrol>().setPatrols(target);
         TabEnemySpawn.Add(EnnemySPWND);
-   
     }
 }

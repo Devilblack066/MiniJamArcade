@@ -29,9 +29,9 @@ public class BulletScript : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            Debug.Log("Touched");
+            //Debug.Log(other.GetComponent<Rigidbody>());
             other.GetComponent<Patrol>().StopPatrol();
-            other.GetComponent<Rigidbody>().AddRelativeForce(transform.position*100000);
+            other.GetComponent<Rigidbody>().velocity = new Vector3(transform.forward.x*10000, other.transform.up.y * 10000, transform.forward.z * 10000);
         }
     }
 
