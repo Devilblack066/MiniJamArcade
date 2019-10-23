@@ -25,13 +25,15 @@ public class BulletScript : MonoBehaviour
     /// OnTriggerEnter is called when the Collider other enters the trigger.
     /// </summary>
     /// <param name="other">The other Collider involved in this collision.</param>
-    //void OnTriggerEnter(Collider other)
-    // {
-        //if(other.tag == "Enemy")
-        //{
-        //    SceneManager.LoadScene(0);
-        //}
-   // }
+    void OnTriggerEnter(Collider other)
+    {
+        if(other.tag == "Enemy")
+        {
+            Debug.Log("Touched");
+            other.GetComponent<Patrol>().StopPatrol();
+            other.GetComponent<Rigidbody>().AddRelativeForce(transform.position*100000);
+        }
+    }
 
     /*private void OnCollisionEnter2D(Collision2D collision)
     {

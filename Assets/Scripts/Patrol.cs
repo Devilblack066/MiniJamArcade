@@ -10,7 +10,7 @@
         public Transform[] target;
         [SerializeField]private int speed = 0;
         private int current = 0;
-
+        private bool isactive = true;
 
         void Start () {
             
@@ -21,7 +21,7 @@
         void Update () {
             //Debug.Log(target.Length);
 
-            if(transform.position != target[current].position && target != null && transform.position.y > 0){
+            if(transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true){
                 Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
                 GetComponent<Rigidbody>().MovePosition(pos);
                 //Debug.Log(current);
@@ -51,5 +51,10 @@
         public void setPatrols(Transform[] tabtarg)
         {
             target = tabtarg;
+        }
+
+        public void StopPatrol()
+        {
+            isactive = false;
         }
 }
