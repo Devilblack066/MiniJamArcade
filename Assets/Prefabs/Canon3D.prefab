@@ -130,7 +130,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PivotCanon: {fileID: 5784229594750792561}
-  CanonDelayShot: 4
+  CanonDelayShot: 2.25
   TimerShot: 0
   BulletPrefab: {fileID: 479814194949490394, guid: 166030b57d15f6041b5cd379eaf61f02,
     type: 3}
