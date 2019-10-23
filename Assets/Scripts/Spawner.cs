@@ -12,22 +12,19 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] public GameObject PrefabEnemy;
 
-    [SerializeField] public int InitialSpoolCount;
+    [SerializeField] public int InitialSpoolCount = 10;
 
-    [SerializeField] public int spawnTime;
+    [SerializeField] public float spawnTime = 1.0f;
 
     private List<GameObject> TabEnemySpawn;
-    private bool spawnend = false;
+    private Coroutine theCoroutine;
+    private int nbspawn = 0;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        for(int i=0;i<InitialSpoolCount;i++){
-        Invoke("Spawn", spawnTime);
-
-        }
-        spawnend = true;
+        theCoroutine = StartCoroutine(Spawn());
     }
 
     // Update is called once per frame
@@ -51,12 +48,22 @@ public class Spawner : MonoBehaviour
         }*/
     }
 
-        void Spawn ()
+    public IEnumerator Spawn()
     {
-
-        // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
-        GameObject EnnemySPWND = Instantiate (PrefabEnemy,this.transform.position ,this.transform.rotation);
-        EnnemySPWND.GetComponent<Patrol>().setPatrols(target);
-        TabEnemySpawn.Add(EnnemySPWND);
+        while (true)
+        {
+            ++nbspawn;
+            //Debug.Log(nbspawn);
+            // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
+            GameObject EnnemySPWND = Instantiate(PrefabEnemy, this.transform.position, this.transform.rotation);
+            EnnemySPWND.GetComponent<Patrol>().setPatrols(target);
+            //TabEnemySpawn.Add(EnnemySPWND);
+            if (nbspawn == InitialSpoolCount)
+            {
+                //Debug.Log("?");
+                StopCoroutine(theCoroutine);
+            }
+            yield return new WaitForSeconds(1.0f);
+        }
     }
 }

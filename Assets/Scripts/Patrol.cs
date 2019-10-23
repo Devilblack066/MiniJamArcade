@@ -42,7 +42,7 @@
             if(other.tag == "target"){
                 if(current+1 < target.Length)
                 {
-                    Debug.Log(current);
+                    //Debug.Log(current);
                     current += + 1;
                 }
             }
