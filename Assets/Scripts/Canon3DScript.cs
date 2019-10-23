@@ -9,6 +9,9 @@ public class Canon3DScript : MonoBehaviour
     public float CanonDelayShot = 4.0f;
     public float TimerShot = 0.0f;
 
+    public float ClampMin = -0.6f;
+    public float ClampMax =  0.6f;
+
     public GameObject BulletPrefab;
     public GameObject BulletSpawnerPos;
     // Start is called before the first frame update
@@ -32,8 +35,15 @@ public class Canon3DScript : MonoBehaviour
         {
             /*hit.collider.GetComponent<Renderer>().material.color = Color.red;*/
             //Debug.Log(hit.point);
-            PivotCanon.transform.LookAt(hit.point);
-            PivotCanon.transform.eulerAngles = new Vector3(0, PivotCanon.transform.eulerAngles.y, 0);
+            Quaternion resultLookAt = Quaternion.LookRotation(hit.point - transform.position, transform.up);
+            //Debug.Log(Quaternion.LookRotation(hit.point - transform.position, transform.up));
+
+            if (!(resultLookAt.y <= ClampMin || resultLookAt.y >= ClampMax))
+            {
+                PivotCanon.transform.LookAt(hit.point);
+                PivotCanon.transform.eulerAngles = new Vector3(0, PivotCanon.transform.eulerAngles.y, 0);
+            }
+            
         }
 
 
