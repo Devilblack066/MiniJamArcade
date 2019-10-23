@@ -80,7 +80,7 @@ public class Spawner : MonoBehaviour
                 StopCoroutine(theCoroutine);
                 StartCoroutine(EzWin());
             }
-            yield return new WaitForSeconds(1.0f);
+            yield return new WaitForSeconds(spawnTime);
         }
     }
 }
