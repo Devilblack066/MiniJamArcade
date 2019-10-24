@@ -79,7 +79,7 @@ public class Spawner : MonoBehaviour
             {
                 //Debug.Log("?");
                 /*if(theCoroutine != null)*/
-                StartCoroutine(CheckWin());
+                //StartCoroutine(CheckWin());
                 StopCoroutine(theCoroutine);
             }
             yield return new WaitForSeconds(spawnTime);
