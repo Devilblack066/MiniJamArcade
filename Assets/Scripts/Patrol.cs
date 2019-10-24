@@ -33,8 +33,7 @@ public class Patrol : MonoBehaviour {
 
     void Update () {
         //Debug.Log(GetComponent<Rigidbody>().velocity);
-
-        GetComponentInChildren<Animator>().SetFloat("Horizontal", -GetComponentInChildren<Rigidbody>().velocity.x);
+        GetComponentInChildren<Animator>().SetFloat("Horizontal", GetComponentInChildren<Rigidbody>().velocity.x);
         GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponentInChildren<Rigidbody>().velocity.z);
         if (current == target.Length) return;
         if (transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true){
@@ -49,8 +48,9 @@ public class Patrol : MonoBehaviour {
             source.PlayOneShot(Higdie1);
             soundon = true;
         }
-        if(this.transform.position.y > 5000 || this.transform.position.y < -5)
+        if(this.transform.position.y > 4000 || this.transform.position.y < -5)
         {
+            Debug.Log(Spawner.EnemyCount);
             Spawner.EnemyCount -= 1;
             Destroy(this.gameObject);
             //SceneManager.LoadScene(0);

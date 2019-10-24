@@ -59,9 +59,10 @@ public class Spawner : MonoBehaviour
 
     public IEnumerator CheckWin()
     {
-        while(true)
+        while (true)
         {
-            if(EnemyCount == 0 )
+            Debug.Log(EnemyCount);
+            if (EnemyCount == 0 )
             {
                 //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
                 SceneManager.LoadScene(0);
@@ -80,11 +81,12 @@ public class Spawner : MonoBehaviour
             if (nbspawn < InitialSpoolCount)
             {
                 ++nbspawn;
+                ++EnemyCount;
                 //Debug.Log(nbspawn);
                 // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
                 GameObject EnnemySPWND = Instantiate(PrefabEnemy, this.transform.position, this.transform.rotation);
                 EnnemySPWND.GetComponent<Patrol>().setPatrols(target);
-                ++EnemyCount;
+                
             }
             else
             {
@@ -106,12 +108,12 @@ public class Spawner : MonoBehaviour
             if (nbspawnfaster < InitialSpoolCountFaster)
             {
                 ++nbspawnfaster;
+                ++EnemyCount;
                 //Debug.Log(nbspawn);
                 // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
                 GameObject EnnemySPWND = Instantiate(PrefabEnemyFaster, this.transform.position, this.transform.rotation);
                 Transform[] newtab = { target[0], target[target.Length - 1] };
                 EnnemySPWND.GetComponent<Patrol>().setPatrols(newtab);
-                ++EnemyCount;
             }
             else
             {
