@@ -30,6 +30,8 @@ public class Canon3DScript : MonoBehaviour
     public GameObject SparksRight;
     public GameObject SparksLeft;
 
+    public GameObject Aimer;
+
     void Start()
     {
         HUD = Instantiate(HUD);
@@ -61,6 +63,7 @@ public class Canon3DScript : MonoBehaviour
             }
             
         }
+        Aimer.transform.position = hit.point;
         if (Input.GetAxis("Mouse X") > 0.2)
         {
             sourceRail.mute = false;
