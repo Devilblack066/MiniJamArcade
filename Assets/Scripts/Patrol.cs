@@ -70,12 +70,9 @@ public class Patrol : MonoBehaviour {
         }
         if (other.tag == "bullet")
         {
-            if (current + 1 < target.Length)
-            {
-                //Debug.Log(current);
-                Spawner.EnemyCount -= 1;
-                //Destroy(this.gameObject);
-            }
+            //Debug.Log(current);
+            //Spawner.EnemyCount -= 1;
+            //Destroy(this.gameObject);
         }
     }
 
