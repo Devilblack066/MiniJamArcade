@@ -57,7 +57,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7766813618116756491}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.581, z: 0}
+  m_LocalPosition: {x: 0, y: 0.581, z: 0}
   m_LocalScale: {x: 1.5, y: 0.5, z: 1.2}
   m_Children: []
   m_Father: {fileID: 8943652722625962437}
@@ -118,10 +118,10 @@ BoxCollider:
   m_GameObject: {fileID: 7766813618116756491}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.3074404, y: 2.0166712, z: 1.5516235}
+  m_Center: {x: -0.022077942, y: -0.47971618, z: -0.10673828}
 --- !u!1 &8737902722615521368
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 3
   m_Sprite: {fileID: -857806855680839475, guid: c4389e19093cb8e4ea4d0bc549fe4e6a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 1308168186117137721}
   - component: {fileID: 716766647810768596}
   m_Layer: 0
-  m_Name: Enemy1
+  m_Name: NormalEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -343,7 +343,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 2000
+  speed: 1000
 --- !u!65 &716766647810768596
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -352,8 +352,8 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8943652722625962463}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
+  m_IsTrigger: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.4066179, y: 1.3371545, z: 2.2330034}
+  m_Center: {x: 0.06703339, y: 0.16857728, z: 0.14344269}
