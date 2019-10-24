@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48bf4829e92eb4341a3b03ee5bc3351d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AccelerationProjectile: 100
+  AccelerationProjectile: 25
 --- !u!54 &876424893572273088
 Rigidbody:
   m_ObjectHideFlags: 0

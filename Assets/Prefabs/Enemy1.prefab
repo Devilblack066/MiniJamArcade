@@ -191,7 +191,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 10
   m_Sprite: {fileID: -857806855680839475, guid: c4389e19093cb8e4ea4d0bc549fe4e6a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -238,7 +238,7 @@ GameObject:
   - component: {fileID: 1308168186117137721}
   - component: {fileID: 716766647810768596}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: Enemy1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
