@@ -20,7 +20,7 @@ public class TestEnemy : MonoBehaviour
         
         if (other.tag =="bullet")
         {
-            Debug.Log("Yah");
+            //Debug.Log("Yah");
             GetComponent<Rigidbody>().velocity=new Vector3(1,5000,1);
         }
     }

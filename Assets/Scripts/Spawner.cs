@@ -32,7 +32,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         if(InitialSpoolCount > 0)theCoroutine = StartCoroutine(SpawnNormal());
-        if(InitialSpoolCountFaster > 0)theCoroutineFaster = StartCoroutine(SpawnFaster());
+        if(InitialSpoolCountFaster>0)theCoroutineFaster = StartCoroutine(SpawnFaster());
         //StartCoroutine(EzWin());
     }
 
@@ -63,7 +63,7 @@ public class Spawner : MonoBehaviour
         {
             if(EnemyCount == 0 )
             {
-                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+                //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
                 SceneManager.LoadScene(0);
                 //SceneManager.UnloadSceneAsync();
             }
