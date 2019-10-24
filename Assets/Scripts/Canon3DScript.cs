@@ -17,7 +17,14 @@ public class Canon3DScript : MonoBehaviour
 
     public GameObject HUD;
     public GameObject theCamera;
+    public GameObject AnimSmoke;
     // Start is called before the first frame update
+    [SerializeField]
+    public AudioSource source;
+
+    [SerializeField]
+    public AudioClip BoomCanon;
+
     void Start()
     {
         HUD = Instantiate(HUD);
@@ -55,6 +62,7 @@ public class Canon3DScript : MonoBehaviour
         {
             Shoot();
             TimerShot += CanonDelayShot;
+            source.PlayOneShot(BoomCanon);
         }
         if (TimerShot > 0.0f)
         {
@@ -66,5 +74,11 @@ public class Canon3DScript : MonoBehaviour
     {
         GameObject bullet = Instantiate(BulletPrefab, BulletSpawnerPos.transform.position, BulletSpawnerPos.transform.rotation);
         theCamera.GetComponent<CameraShake>().shakeDuration = 0.1f;
+        AnimSmoke.active = true;
+        Invoke("DesactiveAnim", 0.4F);
+    }
+    public void DesactiveAnim()
+    {
+        AnimSmoke.active = false;
     }
 }

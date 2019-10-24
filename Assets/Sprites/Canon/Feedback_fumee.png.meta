@@ -1,7 +1,178 @@
 fileFormatVersion: 2
 guid: bbdd483caf1d86341ab8200d390f8d70
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 1135018126490735922
+    second: Feedback_fumee_0
+  - first:
+      213: -8778574737660461901
+    second: Feedback_fumee_1
+  - first:
+      213: 3810114689912118337
+    second: Feedback_fumee_2
+  - first:
+      213: -8705396908047872884
+    second: Feedback_fumee_3
+  - first:
+      213: 1199066122695645307
+    second: Feedback_fumee_4
+  - first:
+      213: 2466457073129523447
+    second: Feedback_fumee_5
+  - first:
+      213: 3985063743423105399
+    second: Feedback_fumee_6
+  - first:
+      213: 1577688984228272632
+    second: Feedback_fumee_7
+  - first:
+      213: -7679142445052063490
+    second: Feedback_fumee_8
+  - first:
+      213: 927586161013382055
+    second: Feedback_fumee_9
+  - first:
+      213: 4422845842664296376
+    second: Feedback_fumee_10
+  - first:
+      213: 8311720014590174614
+    second: Feedback_fumee_11
+  - first:
+      213: -4048639640105216802
+    second: Feedback_fumee_12
+  - first:
+      213: 2913344570003259171
+    second: Feedback_fumee_13
+  - first:
+      213: 3144746045743639322
+    second: Feedback_fumee_14
+  - first:
+      213: -6434595287051280460
+    second: Feedback_fumee_15
+  - first:
+      213: 7196561938238275724
+    second: Feedback_fumee_16
+  - first:
+      213: 9088007068060435506
+    second: Feedback_fumee_17
+  - first:
+      213: 6221127569938291638
+    second: Feedback_fumee_18
+  - first:
+      213: -5219903542166613017
+    second: Feedback_fumee_19
+  - first:
+      213: -5498488592469001111
+    second: Feedback_fumee_20
+  - first:
+      213: -6537226113588053458
+    second: Feedback_fumee_21
+  - first:
+      213: 2664050379696795728
+    second: Feedback_fumee_22
+  - first:
+      213: 4325140861651684781
+    second: Feedback_fumee_23
+  - first:
+      213: 951407026304877424
+    second: Feedback_fumee_24
+  - first:
+      213: 300035751230928110
+    second: Feedback_fumee_25
+  - first:
+      213: 8863122434126583975
+    second: Feedback_fumee_26
+  - first:
+      213: 3915464260023743767
+    second: Feedback_fumee_27
+  - first:
+      213: -8345063095014001064
+    second: Feedback_fumee_28
+  - first:
+      213: 7037511109027774845
+    second: Feedback_fumee_29
+  - first:
+      213: -2763157760013912903
+    second: Feedback_fumee_30
+  - first:
+      213: 1959511061509399962
+    second: Feedback_fumee_31
+  - first:
+      213: 796123460793389997
+    second: Feedback_fumee_32
+  - first:
+      213: 8365809469014676936
+    second: Feedback_fumee_33
+  - first:
+      213: 7024540666426637581
+    second: Feedback_fumee_34
+  - first:
+      213: 3565682110243363670
+    second: Feedback_fumee_35
+  - first:
+      213: 2902379317599628021
+    second: Feedback_fumee_36
+  - first:
+      213: -264232343944463318
+    second: Feedback_fumee_37
+  - first:
+      213: 8315383279049533096
+    second: Feedback_fumee_38
+  - first:
+      213: 5198685657275770599
+    second: Feedback_fumee_39
+  - first:
+      213: -2973273227521638208
+    second: Feedback_fumee_40
+  - first:
+      213: -7390027405142760750
+    second: Feedback_fumee_41
+  - first:
+      213: -4811965600554325728
+    second: Feedback_fumee_42
+  - first:
+      213: 3304002297279316935
+    second: Feedback_fumee_43
+  - first:
+      213: 6046782801247557176
+    second: Feedback_fumee_44
+  - first:
+      213: -37736460714567923
+    second: Feedback_fumee_45
+  - first:
+      213: -9077260556191780604
+    second: Feedback_fumee_46
+  - first:
+      213: 811954850804255639
+    second: Feedback_fumee_47
+  - first:
+      213: -3648343156165575851
+    second: Feedback_fumee_48
+  - first:
+      213: 3604292478583717170
+    second: Feedback_fumee_49
+  - first:
+      213: -8297071600482223636
+    second: Feedback_fumee_50
+  - first:
+      213: 3207791176744703022
+    second: Feedback_fumee_51
+  - first:
+      213: 8877416376722016389
+    second: Feedback_fumee_52
+  - first:
+      213: 5034216939603529226
+    second: Feedback_fumee_53
+  - first:
+      213: -7913307409696648319
+    second: Feedback_fumee_54
+  - first:
+      213: -927452821939298055
+    second: Feedback_fumee_55
+  - first:
+      213: -5671746818260224760
+    second: Feedback_fumee_56
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -108,11 +279,116 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Feedback_fumee_0
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 152
+        width: 80
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9eae8821731d554458532c27135ee8da
+      internalID: 1135018126490735922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feedback_fumee_1
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 120
+        width: 144
+        height: 150
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7863b9b17e93dc4190dda1095d94734
+      internalID: -8778574737660461901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feedback_fumee_2
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 92
+        width: 183
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d70f56d01ca5d8c489d929083fa58769
+      internalID: 3810114689912118337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feedback_fumee_3
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 0
+        width: 288
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c0829b0ab8ac0d47bf9cc2fb8ac4ffd
+      internalID: -8705396908047872884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Feedback_fumee_4
+      rect:
+        serializedVersion: 2
+        x: 1083
+        y: 0
+        width: 288
+        height: 383
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7123fedecd27d524ca5bb656b2af8048
+      internalID: 1199066122695645307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: a1f49d8e9cb68614c954cc23ea990ca4
     internalID: 0
     vertices: []
     indices: 

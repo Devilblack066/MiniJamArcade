@@ -12,6 +12,18 @@ public class Patrol : MonoBehaviour {
     private int current = 0;
     private bool isactive = true;
 
+    [SerializeField]
+    AudioSource source;
+
+    [SerializeField]
+    AudioClip Higdie1;
+    
+    [SerializeField]
+    AudioClip Higdie2;
+
+    bool soundon = false;
+
+
     void Start () {
             
     }
@@ -27,7 +39,14 @@ public class Patrol : MonoBehaviour {
             GetComponentInChildren<Rigidbody>().MovePosition(pos);
             //Debug.Log(current);
         }//else current = (current + 1) % target.Length;
-        if(this.transform.position.y < -2  )
+        
+
+        if(this.transform.position.y > 200 && soundon == false)
+        {
+            source.PlayOneShot(Higdie1);
+            soundon = true;
+        }
+        if(this.transform.position.y > 5000 )
         {
             Destroy(this.gameObject);
             //SceneManager.LoadScene(0);
@@ -40,10 +59,12 @@ public class Patrol : MonoBehaviour {
     /// <param name="other">The other Collider involved in this collision.</param>
     void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "target"){
+        Debug.Log(other.name);
+        if(other.tag == "target" && tag == "Enemy" ){
+          
             if(current+1 < target.Length)
             {
-                //Debug.Log(current);
+                Debug.Log(current);
                 current += 1;
             }
         }

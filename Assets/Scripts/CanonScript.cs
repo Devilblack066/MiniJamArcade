@@ -19,6 +19,8 @@ public class CanonScript : MonoBehaviour
     [SerializeField]
     public GameObject BulletPrefab;
 
+    public GameObject AnimSmoke;
+
     [SerializeField]
     public float CanonDelayShot = 5.0f;
 
