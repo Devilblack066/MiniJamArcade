@@ -19,6 +19,12 @@ public class Canon3DScript : MonoBehaviour
     public GameObject theCamera;
     public GameObject AnimSmoke;
     // Start is called before the first frame update
+    [SerializeField]
+    public AudioSource source;
+
+    [SerializeField]
+    public AudioClip BoomCanon;
+
     void Start()
     {
         HUD = Instantiate(HUD);
@@ -56,6 +62,7 @@ public class Canon3DScript : MonoBehaviour
         {
             Shoot();
             TimerShot += CanonDelayShot;
+            source.PlayOneShot(BoomCanon);
         }
         if (TimerShot > 0.0f)
         {

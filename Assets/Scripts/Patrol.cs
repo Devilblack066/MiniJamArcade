@@ -12,6 +12,18 @@ public class Patrol : MonoBehaviour {
     private int current = 0;
     private bool isactive = true;
 
+    [SerializeField]
+    AudioSource source;
+
+    [SerializeField]
+    AudioClip Higdie1;
+    
+    [SerializeField]
+    AudioClip Higdie2;
+
+    bool soundon = false;
+
+
     void Start () {
             
     }
@@ -27,6 +39,13 @@ public class Patrol : MonoBehaviour {
             GetComponentInChildren<Rigidbody>().MovePosition(pos);
             //Debug.Log(current);
         }//else current = (current + 1) % target.Length;
+        
+
+        if(this.transform.position.y > 200 && soundon == false)
+        {
+            source.PlayOneShot(Higdie1);
+            soundon = true;
+        }
         if(this.transform.position.y > 5000 )
         {
             Destroy(this.gameObject);
