@@ -29,9 +29,10 @@ public class BulletScript : MonoBehaviour
     {
         if(other.tag == "Enemy")
         {
-            Debug.Log(other.name);
-            other.GetComponentInParent<Patrol>().StopPatrol();
-            other.GetComponentInParent<Rigidbody>().velocity = new Vector3(transform.forward.x*50000, other.transform.up.y * 50000, transform.forward.z * 50000);
+            //Debug.Log(other.name);
+            other.GetComponentInParent<Rigidbody>().isKinematic = false;
+            //other.GetComponentInParent<Patrol>().StopPatrol();
+            other.GetComponentInParent<Rigidbody>().velocity = new Vector3(transform.forward.x, other.transform.up.y * 5000, transform.forward.z);
         }
     }
 

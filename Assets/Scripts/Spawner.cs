@@ -62,7 +62,7 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-            Debug.Log(EnemyCount);
+            //Debug.Log(EnemyCount);
             if (EnemyCount == 0 )
             {
                 //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);

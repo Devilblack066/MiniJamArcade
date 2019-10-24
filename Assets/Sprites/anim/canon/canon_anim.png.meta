@@ -1,7 +1,31 @@
 fileFormatVersion: 2
 guid: 396c53b63313c8844ad1ace659f57796
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -6540672183763300940
+    second: canon_anim_0
+  - first:
+      213: 115522689495630069
+    second: canon_anim_1
+  - first:
+      213: -5420046916401811940
+    second: canon_anim_2
+  - first:
+      213: 6275410866860251328
+    second: canon_anim_3
+  - first:
+      213: 3933189074314809063
+    second: canon_anim_4
+  - first:
+      213: 54921489361748299
+    second: canon_anim_5
+  - first:
+      213: -723420223396987536
+    second: canon_anim_6
+  - first:
+      213: 7955480852790121850
+    second: canon_anim_7
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -31,7 +55,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -40,7 +64,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -82,9 +106,201 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: canon_anim_0
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 339
+        width: 106
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ca2390707461584c8d610edf4397045
+      internalID: -6540672183763300940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canon_anim_1
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 336
+        width: 106
+        height: 156
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f8592f6cf722be44b9b53e4c2a6a4b4
+      internalID: 115522689495630069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canon_anim_2
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 328
+        width: 107
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37524afedafbc0745b50fafaa79791b2
+      internalID: -5420046916401811940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canon_anim_3
+      rect:
+        serializedVersion: 2
+        x: 389
+        y: 319
+        width: 114
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c446389249c8ed84192d8442222e771e
+      internalID: 6275410866860251328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canon_anim_4
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 142
+        width: 107
+        height: 155
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c431c678503295643840e22d07fcd008
+      internalID: 3933189074314809063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canon_anim_5
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 126
+        width: 108
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a92ab1d7a00d7e64a90f4d77bc9c6f48
+      internalID: 54921489361748299
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canon_anim_6
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 143
+        width: 107
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a871b7624546a645ac461b5b08d8e2c
+      internalID: -723420223396987536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: canon_anim_7
+      rect:
+        serializedVersion: 2
+        x: 395
+        y: 159
+        width: 108
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee25aa24bf7d4094784bc78a80847e2c
+      internalID: 7955480852790121850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

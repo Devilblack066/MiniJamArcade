@@ -33,13 +33,13 @@ public class Patrol : MonoBehaviour {
 
     void Update () {
         //Debug.Log(GetComponent<Rigidbody>().velocity);
-        GetComponentInChildren<Animator>().SetFloat("Horizontal", GetComponentInChildren<Rigidbody>().velocity.x);
-        GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponentInChildren<Rigidbody>().velocity.z);
+        GetComponentInChildren<Animator>().SetFloat("Horizontal", GetComponent<Rigidbody>().velocity.x);
+        GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponent<Rigidbody>().velocity.z);
         if (current == target.Length) return;
         if (transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true){
             Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
-            GetComponentInChildren<Rigidbody>().MovePosition(pos);
-            //Debug.Log(current);
+            GetComponent<Rigidbody>().MovePosition(pos);
+            //Debug.Log(GetComponent<Rigidbody>().velocity);
         }//else current = (current + 1) % target.Length;
         
 
