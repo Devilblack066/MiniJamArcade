@@ -33,6 +33,7 @@ public class Patrol : MonoBehaviour {
 
     void Update () {
         //Debug.Log(GetComponent<Rigidbody>().velocity);
+
         GetComponentInChildren<Animator>().SetFloat("Horizontal", -GetComponentInChildren<Rigidbody>().velocity.x);
         GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponentInChildren<Rigidbody>().velocity.z);
         if (transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true){
@@ -61,13 +62,19 @@ public class Patrol : MonoBehaviour {
     /// <param name="other">The other Collider involved in this collision.</param>
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.name);
-        if(other.tag == "target" && tag == "Enemy" ){
+        //Debug.Log(other.name);
+        //Debug.Log(current);
+        if (other.tag == "target" && tag == "Enemy" ){
           
             if(current+1 < target.Length && lastCollider != other)
             {
-                Debug.Log(current);
+                //Debug.Log(current);
                 current += 1;
+                lastCollider = other;
+            }
+            else if (current + 1 > target.Length)
+            {
+                SceneManager.LoadScene(0);
             }
         }
         if (other.tag == "bullet")
