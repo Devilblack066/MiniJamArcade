@@ -36,6 +36,7 @@ public class Patrol : MonoBehaviour {
 
         GetComponentInChildren<Animator>().SetFloat("Horizontal", -GetComponentInChildren<Rigidbody>().velocity.x);
         GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponentInChildren<Rigidbody>().velocity.z);
+        if (current == target.Length) return;
         if (transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true){
             Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
             GetComponentInChildren<Rigidbody>().MovePosition(pos);
@@ -63,26 +64,26 @@ public class Patrol : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.name);
-        //Debug.Log(current);
+        
         if (other.tag == "target" && tag == "Enemy" ){
-          
-            if(current+1 < target.Length && lastCollider != other)
+            //Debug.Log(current + " je suis à ,et la taille du tableau " + target.Length);
+            if (current+1 <= target.Length && lastCollider != other && target[current] == other.transform)
             {
                 //Debug.Log(current);
                 current += 1;
                 lastCollider = other;
             }
-            else if (current + 1 > target.Length)
+            if (current == target.Length)
             {
                 SceneManager.LoadScene(0);
             }
         }
-        if (other.tag == "bullet")
+        /*if (other.tag == "bullet")
         {
             //Debug.Log(current);
             //Spawner.EnemyCount -= 1;
             //Destroy(this.gameObject);
-        }
+        }*/
     }
 
     public void setPatrols(Transform[] tabtarg)
