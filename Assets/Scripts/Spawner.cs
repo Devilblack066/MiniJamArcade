@@ -33,6 +33,7 @@ public class Spawner : MonoBehaviour
     {
         if(InitialSpoolCount > 0)theCoroutine = StartCoroutine(SpawnNormal());
         if(InitialSpoolCountFaster>0)theCoroutineFaster = StartCoroutine(SpawnFaster());
+        EnemyCount = InitialSpoolCount + InitialSpoolCountFaster;
         //StartCoroutine(EzWin());
     }
 
@@ -81,7 +82,7 @@ public class Spawner : MonoBehaviour
             if (nbspawn < InitialSpoolCount)
             {
                 ++nbspawn;
-                ++EnemyCount;
+                //++EnemyCount;
                 //Debug.Log(nbspawn);
                 // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
                 GameObject EnnemySPWND = Instantiate(PrefabEnemy, this.transform.position, this.transform.rotation);
@@ -108,7 +109,7 @@ public class Spawner : MonoBehaviour
             if (nbspawnfaster < InitialSpoolCountFaster)
             {
                 ++nbspawnfaster;
-                ++EnemyCount;
+                //++EnemyCount;
                 //Debug.Log(nbspawn);
                 // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
                 GameObject EnnemySPWND = Instantiate(PrefabEnemyFaster, this.transform.position, this.transform.rotation);

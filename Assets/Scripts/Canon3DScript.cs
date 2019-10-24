@@ -20,10 +20,15 @@ public class Canon3DScript : MonoBehaviour
     public GameObject AnimSmoke;
     // Start is called before the first frame update
     [SerializeField]
-    public AudioSource source;
+    public AudioSource sourceShot;
+    [SerializeField]
+    public AudioSource sourceRail;
 
     [SerializeField]
     public AudioClip BoomCanon;
+
+    public GameObject SparksRight;
+    public GameObject SparksLeft;
 
     void Start()
     {
@@ -56,13 +61,30 @@ public class Canon3DScript : MonoBehaviour
             }
             
         }
-
+        if (Input.GetAxis("Mouse X") > 0.2)
+        {
+            sourceRail.mute = false;
+            SparksLeft.active = true;
+            SparksRight.active = false;
+        }
+        else if (Input.GetAxis("Mouse X") < -0.2)
+        {
+            sourceRail.mute = false;
+            SparksLeft.active = false;
+            SparksRight.active = true;
+        }
+        else
+        {
+            sourceRail.mute = true;
+            SparksLeft.active = false;
+            SparksRight.active = false;
+        }
 
         if (Input.GetButtonDown("Fire1") && TimerShot <= 0.0f)
         {
             Shoot();
             TimerShot += CanonDelayShot;
-            source.PlayOneShot(BoomCanon);
+            sourceShot.PlayOneShot(BoomCanon);
         }
         if (TimerShot > 0.0f)
         {
