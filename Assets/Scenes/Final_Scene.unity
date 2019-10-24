@@ -13499,32 +13499,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5784229594756361088, guid: 93f02c1f051116a4bb3b300766c98a69,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 5784229594756361088, guid: 93f02c1f051116a4bb3b300766c98a69,
-        type: 3}
-      propertyPath: m_LocalScale.y
-      value: 500
-      objectReference: {fileID: 0}
-    - target: {fileID: 5784229594756361088, guid: 93f02c1f051116a4bb3b300766c98a69,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 180
-      objectReference: {fileID: 0}
-    - target: {fileID: 5784229594756361095, guid: 93f02c1f051116a4bb3b300766c98a69,
-        type: 3}
-      propertyPath: BulletPrefab
-      value: 
-      objectReference: {fileID: 6524336128197592338, guid: a45e710945c923142a4e7004b478091b,
-        type: 3}
-    - target: {fileID: 5784229594756361095, guid: 93f02c1f051116a4bb3b300766c98a69,
-        type: 3}
-      propertyPath: CanonDelayShot
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 93f02c1f051116a4bb3b300766c98a69, type: 3}
 --- !u!1 &509270520 stripped
@@ -13903,7 +13877,7 @@ PrefabInstance:
         type: 3}
       propertyPath: target.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 280958489}
     - target: {fileID: 1655187602709129191, guid: bc8b611404c633c46b31831eac8fd39d,
         type: 3}
       propertyPath: target.Array.data[3]

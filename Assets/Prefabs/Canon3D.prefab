@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4513199770413332427}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: 5.173}
+  m_LocalPosition: {x: 0, y: 0.4, z: 2.7529993}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 5784229594750792560}
@@ -56,7 +56,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5784229594750792561}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 2.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 724005032404512267}
@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 5784229594756361089}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 180, y: 500, z: 180}
   m_Children:
   - {fileID: 5784229594750792560}
   m_Father: {fileID: 0}
@@ -130,13 +130,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PivotCanon: {fileID: 5784229594750792561}
-  CanonDelayShot: 3
+  CanonDelayShot: 2
   TimerShot: 0
-  ClampMin: -0.6
-  ClampMax: 0.6
-  BulletPrefab: {fileID: 479814194949490394, guid: 166030b57d15f6041b5cd379eaf61f02,
+  ClampMin: -0.3
+  ClampMax: 0.3
+  BulletPrefab: {fileID: 6524336128197592338, guid: a45e710945c923142a4e7004b478091b,
     type: 3}
   BulletSpawnerPos: {fileID: 4513199770413332427}
+  HUD: {fileID: 0}
 --- !u!1 &7112693630482601588
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +165,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7112693630482601588}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: 3.97}
+  m_LocalPosition: {x: 0, y: 0.036, z: 1.55}
   m_LocalScale: {x: 0.1, y: 1.4434612, z: 0.1}
   m_Children: []
   m_Father: {fileID: 5784229594750792560}

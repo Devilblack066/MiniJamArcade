@@ -9,15 +9,18 @@ public class Canon3DScript : MonoBehaviour
     public float CanonDelayShot = 4.0f;
     public float TimerShot = 0.0f;
 
-    public float ClampMin = -0.6f;
-    public float ClampMax =  0.6f;
+    public float ClampMin = -0.3f;
+    public float ClampMax =  0.3f;
 
     public GameObject BulletPrefab;
     public GameObject BulletSpawnerPos;
+
+    public GameObject HUD;
     // Start is called before the first frame update
     void Start()
     {
-        
+        HUD = Instantiate(HUD);
+        HUD.GetComponent<HUDScript>().Canon = this.gameObject;
     }
 
     // Update is called once per frame
