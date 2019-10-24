@@ -112,7 +112,7 @@ public class Spawner : MonoBehaviour
                 //Debug.Log(nbspawn);
                 // Create an instance of the enemy prefab at the randomly selected spawn point's position and rotation.
                 GameObject EnnemySPWND = Instantiate(PrefabEnemyFaster, this.transform.position, this.transform.rotation);
-                Transform[] newtab = { target[0], target[target.Length - 1] };
+                Transform[] newtab = { target[Random.Range(0, target.Length - 2)], target[target.Length - 1] };
                 EnnemySPWND.GetComponent<Patrol>().setPatrols(newtab);
             }
             else

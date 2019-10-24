@@ -54331,7 +54331,7 @@ PrefabInstance:
     - target: {fileID: 1655187602709129191, guid: bc8b611404c633c46b31831eac8fd39d,
         type: 3}
       propertyPath: InitialSpoolCountFaster
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1655187602709129191, guid: bc8b611404c633c46b31831eac8fd39d,
         type: 3}
