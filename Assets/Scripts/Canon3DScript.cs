@@ -16,6 +16,7 @@ public class Canon3DScript : MonoBehaviour
     public GameObject BulletSpawnerPos;
 
     public GameObject HUD;
+    public GameObject theCamera;
     // Start is called before the first frame update
     void Start()
     {
@@ -52,7 +53,7 @@ public class Canon3DScript : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && TimerShot <= 0.0f)
         {
-            GameObject bullet = Instantiate(BulletPrefab, BulletSpawnerPos.transform.position, BulletSpawnerPos.transform.rotation);
+            Shoot();
             TimerShot += CanonDelayShot;
         }
         if (TimerShot > 0.0f)
@@ -60,5 +61,10 @@ public class Canon3DScript : MonoBehaviour
             TimerShot -= Time.deltaTime;
         }
         //transform.position = MyRay.
+    }
+    public void Shoot()
+    {
+        GameObject bullet = Instantiate(BulletPrefab, BulletSpawnerPos.transform.position, BulletSpawnerPos.transform.rotation);
+        theCamera.GetComponent<CameraShake>().shakeDuration = 0.1f;
     }
 }
