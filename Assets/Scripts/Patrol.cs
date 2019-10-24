@@ -20,17 +20,17 @@ public class Patrol : MonoBehaviour {
 
     void Update () {
         //Debug.Log(GetComponent<Rigidbody>().velocity);
-        GetComponentInChildren<Animator>().SetFloat("Horizontal", -GetComponent<Rigidbody>().velocity.x);
-        GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponent<Rigidbody>().velocity.z);
+        GetComponentInChildren<Animator>().SetFloat("Horizontal", -GetComponentInChildren<Rigidbody>().velocity.x);
+        GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponentInChildren<Rigidbody>().velocity.z);
         if (transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true){
             Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
-            GetComponent<Rigidbody>().MovePosition(pos);
+            GetComponentInChildren<Rigidbody>().MovePosition(pos);
             //Debug.Log(current);
         }//else current = (current + 1) % target.Length;
         if(this.transform.position.y < -2  )
         {
             Destroy(this.gameObject);
-            SceneManager.LoadScene(0);
+            //SceneManager.LoadScene(0);
         }
     }
 
@@ -44,7 +44,7 @@ public class Patrol : MonoBehaviour {
             if(current+1 < target.Length)
             {
                 //Debug.Log(current);
-                current += + 1;
+                current += 1;
             }
         }
         if (other.tag == "bullet")
@@ -53,7 +53,7 @@ public class Patrol : MonoBehaviour {
             {
                 //Debug.Log(current);
                 Spawner.EnemyCount -= 1;
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
             }
         }
     }
