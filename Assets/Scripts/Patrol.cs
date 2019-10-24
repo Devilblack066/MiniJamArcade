@@ -23,6 +23,7 @@ public class Patrol : MonoBehaviour {
 
     bool soundon = false;
 
+    Collider lastCollider = null;
 
     void Start () {
             
@@ -46,8 +47,9 @@ public class Patrol : MonoBehaviour {
             source.PlayOneShot(Higdie1);
             soundon = true;
         }
-        if(this.transform.position.y > 5000 )
+        if(this.transform.position.y > 5000 || this.transform.position.y < -5)
         {
+            Spawner.EnemyCount -= 1;
             Destroy(this.gameObject);
             //SceneManager.LoadScene(0);
         }
@@ -62,7 +64,7 @@ public class Patrol : MonoBehaviour {
         Debug.Log(other.name);
         if(other.tag == "target" && tag == "Enemy" ){
           
-            if(current+1 < target.Length)
+            if(current+1 < target.Length && lastCollider != other)
             {
                 Debug.Log(current);
                 current += 1;

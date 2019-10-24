@@ -73,7 +73,9 @@ public class Canon3DScript : MonoBehaviour
     public void Shoot()
     {
         GameObject bullet = Instantiate(BulletPrefab, BulletSpawnerPos.transform.position, BulletSpawnerPos.transform.rotation);
+
         theCamera.GetComponent<CameraShake>().shakeDuration = 0.1f;
+
         AnimSmoke.active = true;
         Invoke("DesactiveAnim", 0.4F);
     }

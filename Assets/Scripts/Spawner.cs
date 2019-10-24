@@ -57,7 +57,9 @@ public class Spawner : MonoBehaviour
         {
             if(EnemyCount == 0 )
             {
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
                 SceneManager.LoadScene(0);
+                //SceneManager.UnloadSceneAsync();
             }
             yield return new WaitForSeconds(0.1f);
         }
