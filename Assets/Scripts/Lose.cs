@@ -13,6 +13,6 @@ public class Lose : MonoBehaviour
     }
     public void Quit()
     {
-        Application.Quit(0);
+        SceneManager.LoadScene(0);
     }
 }
