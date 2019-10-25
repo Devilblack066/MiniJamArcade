@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
     [SerializeField] public float spawnTimeFaster = 5.0f;
 
     private List<GameObject> TabEnemySpawn;
-    private Coroutine theCoroutine = null;
+    public static Coroutine theCoroutine = null;
     private Coroutine theCoroutineFaster = null;
     private int nbspawn = 0;
     private int nbspawnfaster = 0;
@@ -29,11 +29,13 @@ public class Spawner : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
         if(InitialSpoolCount > 0)theCoroutine = StartCoroutine(SpawnNormal());
         if(InitialSpoolCountFaster>0)theCoroutineFaster = StartCoroutine(SpawnFaster());
-        EnemyCount = InitialSpoolCount + InitialSpoolCountFaster;
+        EnnemyCount.NbEnemy += InitialSpoolCount + InitialSpoolCountFaster;
+        StartCoroutine(EnnemyCount.CheckWin());
+        Debug.Log(EnnemyCount.NbEnemy);
         //StartCoroutine(EzWin());
     }
 
@@ -58,22 +60,6 @@ public class Spawner : MonoBehaviour
         }*/
     }
 
-    public IEnumerator CheckWin()
-    {
-        while (true)
-        {
-            //Debug.Log(EnemyCount);
-            if (EnemyCount == 0 )
-            {
-                //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-                SceneManager.LoadScene(0);
-                //SceneManager.UnloadSceneAsync();
-            }
-            yield return new WaitForSeconds(0.1f);
-        }
-
-    }
-
     public IEnumerator SpawnNormal()
     {
         while (true)
@@ -93,13 +79,14 @@ public class Spawner : MonoBehaviour
             {
                 //Debug.Log("?");
                 /*if(theCoroutine != null)*/
-                if (theCoroutineFaster == null) StartCoroutine(CheckWin());
+                //if (theCoroutineFaster == null) StartCoroutine(CheckWin());
                 StopCoroutine(theCoroutine);
                 theCoroutine = null;
             }
             yield return new WaitForSeconds(spawnTime);
         }
     }
+
 
     public IEnumerator SpawnFaster()
     {
@@ -120,7 +107,6 @@ public class Spawner : MonoBehaviour
             {
                 //Debug.Log("?");
                 /*if(theCoroutine != null)*/
-                if (theCoroutine == null) StartCoroutine(CheckWin());
                 StopCoroutine(theCoroutineFaster);
                 theCoroutineFaster = null;
             }

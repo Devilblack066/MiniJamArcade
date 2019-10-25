@@ -51,7 +51,7 @@ public class Patrol : MonoBehaviour {
         if(this.transform.position.y > 4000 || this.transform.position.y < -5)
         {
             //Debug.Log(Spawner.EnemyCount);
-            Spawner.EnemyCount -= 1;
+            EnnemyCount.NbEnemy -= 1;
             Destroy(this.gameObject);
             //SceneManager.LoadScene(0);
         }
