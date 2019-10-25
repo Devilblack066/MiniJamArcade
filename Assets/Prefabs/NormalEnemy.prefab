@@ -209,7 +209,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  speed: 300
+  speed: 160
   source: {fileID: 8944144043233075694}
   Higdie1: {fileID: 8300000, guid: e20a5a9bb55f6cb409dc0d4ff7d690c7, type: 3}
   Higdie2: {fileID: 0}
@@ -280,7 +280,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -376,7 +376,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 6bfb5b5515bdc124ebc40ff942c4b7fa, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0

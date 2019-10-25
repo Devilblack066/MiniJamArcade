@@ -27,15 +27,23 @@ public class Canon3DScript : MonoBehaviour
     [SerializeField]
     public AudioClip BoomCanon;
 
+    [SerializeField]
+    public AudioClip ReloadCanonSFX;
+
     public GameObject SparksRight;
     public GameObject SparksLeft;
 
     public GameObject Aimer;
 
+    public Animator AnimCanon;
+
     void Start()
     {
+
         HUD = Instantiate(HUD);
         HUD.GetComponent<HUDScript>().Canon = this.gameObject;
+        //AnimCanon.SetFloat("Blend",0.0f);
+        AnimCanon.SetBool("Shoot", false);
     }
 
     // Update is called once per frame
@@ -85,9 +93,9 @@ public class Canon3DScript : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && TimerShot <= 0.0f)
         {
-            Shoot();
+            ActiveShoot();
             TimerShot += CanonDelayShot;
-            sourceShot.PlayOneShot(BoomCanon);
+            
         }
         if (TimerShot > 0.0f)
         {
@@ -95,17 +103,28 @@ public class Canon3DScript : MonoBehaviour
         }
         //transform.position = MyRay.
     }
+    public void ActiveShoot()
+    {
+        AnimCanon.SetBool("Shoot", true);
+        Invoke("Shoot", 0.4f);
+        Invoke("DesactiveAnimCanon", 0.6f);
+        //AnimCanon.SetBool("Shoot", false);
+    }
     public void Shoot()
     {
+        sourceShot.PlayOneShot(BoomCanon);
         GameObject bullet = Instantiate(BulletPrefab, BulletSpawnerPos.transform.position, BulletSpawnerPos.transform.rotation);
-
         theCamera.GetComponent<CameraShake>().shakeDuration = 0.1f;
-
         AnimSmoke.active = true;
-        Invoke("DesactiveAnim", 0.4F);
+        sourceShot.PlayOneShot(ReloadCanonSFX);
+        Invoke("DesactiveAnim", 0.4f);
     }
-    public void DesactiveAnim()
+        public void DesactiveAnim()
     {
         AnimSmoke.active = false;
+    }
+    public void DesactiveAnimCanon()
+    {
+        AnimCanon.SetBool("Shoot", false);
     }
 }
