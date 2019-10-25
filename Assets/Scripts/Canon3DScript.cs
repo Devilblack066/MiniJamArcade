@@ -27,6 +27,9 @@ public class Canon3DScript : MonoBehaviour
     [SerializeField]
     public AudioClip BoomCanon;
 
+    [SerializeField]
+    public AudioClip ReloadCanonSFX;
+
     public GameObject SparksRight;
     public GameObject SparksLeft;
 
@@ -113,6 +116,7 @@ public class Canon3DScript : MonoBehaviour
         GameObject bullet = Instantiate(BulletPrefab, BulletSpawnerPos.transform.position, BulletSpawnerPos.transform.rotation);
         theCamera.GetComponent<CameraShake>().shakeDuration = 0.1f;
         AnimSmoke.active = true;
+        sourceShot.PlayOneShot(ReloadCanonSFX);
         Invoke("DesactiveAnim", 0.4f);
     }
         public void DesactiveAnim()

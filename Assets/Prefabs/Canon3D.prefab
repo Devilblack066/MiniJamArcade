@@ -544,6 +544,7 @@ MonoBehaviour:
   sourceShot: {fileID: 1587611866608477958}
   sourceRail: {fileID: 4090797262211751642}
   BoomCanon: {fileID: 8300000, guid: 98f35b2081253214b8177558ba6d372a, type: 3}
+  ReloadCanonSFX: {fileID: 8300000, guid: 4db7b480ee6fef6449f034abf1a42318, type: 3}
   SparksRight: {fileID: 1511015129}
   SparksLeft: {fileID: 1997432594}
   Aimer: {fileID: 966353038}
