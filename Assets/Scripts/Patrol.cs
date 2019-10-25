@@ -36,11 +36,6 @@ public class Patrol : MonoBehaviour {
         GetComponentInChildren<Animator>().SetFloat("Horizontal", GetComponent<Rigidbody>().velocity.x);
         GetComponentInChildren<Animator>().SetFloat("Vertical",GetComponent<Rigidbody>().velocity.z);
         if (current == target.Length) return;
-        if (transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true){
-            Vector3 pos = Vector3.MoveTowards(transform.position,target[current].position,speed * Time.deltaTime);
-            GetComponent<Rigidbody>().MovePosition(pos);
-            //Debug.Log(GetComponent<Rigidbody>().velocity);
-        }//else current = (current + 1) % target.Length;
         
 
         if(this.transform.position.y > 200 && soundon == false)
@@ -57,6 +52,15 @@ public class Patrol : MonoBehaviour {
         }
     }
 
+    private void FixedUpdate()
+    {
+        if (transform.position != target[current].position && target != null && transform.position.y > 0 && isactive == true)
+        {
+            Vector3 pos = Vector3.MoveTowards(transform.position, target[current].position, speed * Time.deltaTime);
+            GetComponent<Rigidbody>().MovePosition(pos);
+            //Debug.Log(GetComponent<Rigidbody>().velocity);
+        }//else current = (current + 1) % target.Length;
+    }
     /// <summary>
     /// OnTriggerEnter is called when the Collider other enters the trigger.
     /// </summary>
