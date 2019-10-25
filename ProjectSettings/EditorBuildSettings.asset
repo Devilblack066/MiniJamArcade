@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Nathan.unity
     guid: e8cd004aab81be44a8dcc2cda74cbaad
+  - enabled: 1
+    path: Assets/Scenes/Win.unity
+    guid: d5e93d52489ad3348b394dc48fc60373
   m_configObjects: {}

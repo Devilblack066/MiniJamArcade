@@ -30,7 +30,7 @@ public class EnnemyCount : MonoBehaviour
             if (EnnemyCount.NbEnemy == 0 )
             {
                 //SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().buildIndex);
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(2);
                 //SceneManager.UnloadSceneAsync();
             }
             yield return new WaitForSeconds(0.1f);

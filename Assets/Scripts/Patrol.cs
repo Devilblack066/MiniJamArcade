@@ -79,7 +79,7 @@ public class Patrol : MonoBehaviour {
             }
             if (current == target.Length)
             {
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(3);
             }
         }
         /*if (other.tag == "bullet")
