@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
+    public GameObject MainWindow;
+    public GameObject CreditWindow;
     public void Play()
     {
         SceneManager.LoadScene(1);
@@ -13,5 +15,15 @@ public class MainMenu : MonoBehaviour
     public void Quit()
     {
         Application.Quit();
+    }
+    public void Credit()
+    {
+        MainWindow.active = false;
+        CreditWindow.active = true;
+    }
+    public void Return()
+    {
+        MainWindow.active = true;
+        CreditWindow.active = false;
     }
 }
